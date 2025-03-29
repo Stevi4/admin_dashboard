@@ -40,20 +40,20 @@ img {
   height: 1.5rem;
 }
 
-.sidebar {
+#sidebar {
   grid-row: 1 / 3;
   background-color: #25a7da;
   padding: 1.5rem;
   color: white;
 }
 
-.sidebar a {
+#sidebar a {
   display: flex;
   width: fit-content;
   align-items: center;
 }
 
-.sidebar > a img {
+#sidebar > a img {
   height: 3rem;
   margin-right: 1.5rem;
 }
@@ -63,23 +63,23 @@ h1 {
   width: fit-content;
 }
 
-.sidebar div {
+#sidebar div {
   margin-top: 3rem;
 }
 
-.sidebar h2 {
+#sidebar h2 {
   font-size: 1em;
   font-weight: 500;
   margin: 0em 0em 0em 1em;
 }
 
-.sidebar div a {
+#sidebar div a {
   font-size: 1.5rem;
   margin-left: 0.75rem;
   margin-top: 1.5rem;
 }
 
-.sidebar div a:first-child {
+#sidebar div a:first-child {
   margin-top: 0rem;
 }
 
@@ -87,7 +87,7 @@ h1 {
   border-radius: 50%;
 }
 
-.header {
+#header {
   background-color: white;
   display: grid;
   grid-template: 1fr 1fr / 2fr 1fr;
@@ -95,19 +95,19 @@ h1 {
   padding: 16px 48px 16px 48px;
 }
 
-.header > div, .header form, .header a, .header label{
+#header > div, #header form, #header a, #header label{
   display: inline-grid;
   align-items: center;
   grid-auto-flow: column;
 }
 
-.header form {
+#header form {
   grid-template-columns: auto 1fr;
   gap: 1rem;
   padding-right: 1rem;
 }
 
-.header input {
+#header input {
   font-size: 1.25rem;
   background-color: #dadae0;
   border: none;
@@ -115,50 +115,50 @@ h1 {
   padding: 0.375rem 0.75rem 0.375rem 0.75rem;
 }
 
-.header input:focus {
+#header input:focus {
   outline: none;
 }
 
-.header > div:nth-child(2) {
+#header > div:nth-child(2) {
   grid-template-columns: 1fr auto auto auto;
   gap: 2rem;
 }
 
-.header > div:nth-child(2) .profile-picture {
+#header > div:nth-child(2) .profile-picture {
   height: 3rem;
 }
 
-.header > div:nth-child(2) h2 {
+#header > div:nth-child(2) h2 {
   font-size: 1.5rem;
   padding-right: 1em;
 }
 
-.header > div:nth-child(3) {
+#header > div:nth-child(3) {
   grid-template-columns: auto 1fr;
   gap: 1.5rem;
 }
 
-.header > div:nth-child(3) .profile-picture {
+#header > div:nth-child(3) .profile-picture {
   height: 4.5rem;
 }
 
-.header div div h3 {
+#header div div h3 {
   font-size: 1rem;
   font-weight: 500;
   margin: 0px;
 }
 
-.header div div h2 {
+#header div div h2 {
   font-size: 1.75rem;
   margin: 0px;
 }
 
-.header > div:last-child {
+#header > div:last-child {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
 }
 
-.header button {
+#header button {
   background-color: #25a7da;
   color: white;
   font-family: "Open Sans";
@@ -170,7 +170,7 @@ h1 {
   border-radius: 1.125rem;
 }
 
-.main {
+#main {
   display: grid;
   grid-template: 1fr 1fr / 3fr 1fr;
   gap: 16px;
@@ -178,16 +178,21 @@ h1 {
   background-color: #dadae0;
 }
 
-.main h2 {
+#main h2 {
   font-weight: 500;
   margin: 0px 0px 1rem 0px;
 }
 
-#projects {
+#main h3 {
+  margin: 0px;
+  font-weight: 500;
+}
+
+#main > div:first-child {
   grid-row: 1 / 3;
 }
 
-#project-list {
+#projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, 25rem);
   gap: 16px;
@@ -211,12 +216,10 @@ h1 {
   background-color: white;
   display: inline-grid;
   grid-template-rows: auto auto 1fr auto;
-  grid-template-areas: "h" "p" "." "a"
+  grid-template-areas: "h" "p" "." "a";
 }
 
 .project h3 {
-  margin: 0px;
-  font-weight: 500;
   grid-area: h;
 }
 
@@ -243,4 +246,44 @@ h1 {
 
 .project .actions a:last-child {
   grid-area: f3;
+}
+
+#announcements {
+  display: grid;
+  grid-template-rows: 1fr auto auto auto 1fr;
+  grid-template-areas: "." "a1" "a2" "a3" ".";
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+#announcements div {
+  padding: 1rem 0rem 1rem 0rem;
+  border-bottom: solid 1px #babac5;
+}
+
+#announcements div:first-child {
+  padding-top: 0rem;
+  grid-area: a1;
+}
+
+#announcements div:nth-child(2) {
+  grid-area: a2;
+}
+
+#announcements div:last-child {
+  padding-bottom: 0rem;
+  border-bottom: none;
+  grid-area: a3;
+}
+
+#announcements p {
+  color: #babac5;
+  font-size: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
