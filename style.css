@@ -3,11 +3,84 @@ body {
   height: 100vh;
   display: grid;
   grid-template: 1fr 4fr / 1fr 4fr;
+  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Semibold.ttf");
+  font-weight: 500;
+}
+
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(204deg) brightness(99%) contrast(104%);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0px;
 }
 
 .sidebar {
   grid-row: 1 / 3;
-  background-color: #25a7da
+  background-color: #25a7da;
+  padding: 1.5rem;
+  color: white;
+}
+
+.sidebar a {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+}
+
+.sidebar > a img {
+  height: 3rem;
+  margin-right: 1.5rem;
+}
+
+h1 {
+  margin: 0px;
+  width: fit-content;
+}
+
+.sidebar div {
+  margin-top: 3rem;
+}
+
+.sidebar div a img {
+  height: 1em;
+  margin-right: 1em;
+}
+
+.sidebar p {
+  font-size: 1em;
+}
+
+.sidebar div a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.sidebar div a:first-child {
+  margin-top: 0rem;
 }
 
 .header {
